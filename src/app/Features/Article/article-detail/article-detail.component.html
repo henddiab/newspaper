@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div *ngIf='!singleItemData' class="loader"></div>
+  <div class="card__wrapper auto-margin" *ngIf='singleItemData'>
+    <div class="card__item d-flex">
+      <div class="card_img">
+        <img class="prlg" src={{singleItemData.urlToImage}} alt="">
+      </div>
+
+      <!-- basic data -->
+      <div class="card_info w-50 ptmd">
+        <h2>{{singleItemData.title}}</h2>
+
+        <div class="description w-75 ptmd pbmd color-gray">
+          <p>{{singleItemData.description}}</p>
+        </div>
+
+        <a href={{singleItemData.url}}>open original post</a>
+      </div>
+
+      <!-- simple data -->
+      <div class="simpleData ptmd pllg pbmd">
+        <div class="mbmd">
+          <label class="prsm" for="">source:</label>
+          <span class="color-gray">{{singleItemData.source.name}}</span>
+        </div>
+
+        <div class="mbmd">
+          <label class="prsm" for="">author:</label>
+          <span class="color-gray">{{singleItemData.author}}</span>
+        </div>
+
+        <div class="mbmd">
+          <label class="prsm" for="">published:</label>
+          <span class="color-gray">{{singleItemData.publishedAt}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

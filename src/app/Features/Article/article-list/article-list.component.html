@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div *ngIf='!allData' class="loader"></div>
+
+  <!-- quick view modal -->
+  <ngx-smart-modal class="classic-modal gray-overlay detailsModal " #detailsModal identifier="detailsModal">
+    <app-article-view *ngIf="articleData" [articleData]="articleData" [navigationLink]="navLink"></app-article-view>
+  </ngx-smart-modal>
+
+  <!-- search input -->
+  <div class="card__search auto-margin">
+    <div class="card__search_Inner mblg d-flex">
+      <div class="Icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789"
+          stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </div>
+      <div class="card__search_Input">
+        <input [(ngModel)]="searchText" placeholder="search..." />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- filter data -->
+  <div class="card__wrapper auto-margin">
+    <div class="filters d-flex mblg">
+      <span class="custom-dropdown">
+        <select #source (change)='selectSource(source)' name="" id="source">
+          <option disabled value="">select source</option>
+          <option value="BBC">BBC</option>
+          <option value="CNN">CNN</option>
+          <option value="Al--jazera">Al--jazera</option>
+          <option value="CNBC">CNBC</option>
+        </select>
+      </span>
+      <span class="custom-dropdown">
+        <select #country (change)='selectCountry(country)' class="mlmd" name="" id="country">
+          <option disabled value="">select country</option>
+          <option value="Egypt">Egypt</option>
+          <option value="United States">United States</option>
+          <option value="Germany">Germany</option>
+          <option value="Russia">Russia</option>
+        </select>
+      </span>
+    </div>
+
+
+    <!-- show all data -->
+    <div *ngFor="let item of allData | search:searchText:'title'" class="card__item d-flex mblg">
+      <div class="card_img" (click)="openModal(title)">
+        <img class="prlg" src={{item.urlToImage}} alt="">
+      </div>
+
+      <div class="card_info ptmd">
+        <h2 #title>{{item.title}}</h2>
+        <p class="w-75 color-gray ptmd pbmd">{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

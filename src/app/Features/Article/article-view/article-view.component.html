@@ -1,0 +1,29 @@
+<div class="card__wrapper auto-margin ptlg pblg pllg prlg" *ngIf='articleData'>
+  <div class="card__item">
+    <div class="d-flex">
+
+      <div class="card_img">
+        <img class="prlg" src={{articleData.urlToImage}} alt="">
+      </div>
+
+      <div class="card_info w-75">
+        <h4>{{articleData.title}}</h4>
+        <div class="mbsm">
+          <label class="prsm" for="">source:</label>
+          <span>{{articleData.source.name}}</span>
+        </div>
+
+        <div class="mbsm">
+          <label class="prsm" for="">author:</label>
+          <span>{{articleData.author}}</span>
+        </div>
+
+        <a routerLink={{navigationLink}}>view details</a>
+
+      </div>
+    </div>
+    <div class="description ptlg color-gray">
+      <p>{{articleData.description}}</p>
+    </div>
+  </div>
+</div>

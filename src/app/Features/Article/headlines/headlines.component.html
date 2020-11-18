@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div *ngIf='!headlinesData' class="loader"></div>
+
+  <!-- quick view modal -->
+  <ngx-smart-modal class="classic-modal gray-overlay detailsModal " #detailsModalHeadline
+    identifier="detailsModalHeadline">
+    <app-article-view *ngIf="articleData" [articleData]="articleData" [navigationLink]="navLink"></app-article-view>
+  </ngx-smart-modal>
+
+  <!-- display data -->
+  <div class="card__wrapper auto-margin" *ngIf='headlinesData'>
+    <div *ngFor='let item of headlinesData let i= index;' class="card__item d-flex mblg">
+      <div class="card_img" (click)="openModal(title)">
+        <img class="prlg" src={{item.urlToImage}} alt="">
+      </div>
+
+      <div class="card_info ptmd">
+        <h2 #title>{{item.title}}</h2>
+        <p class="w-75 color-gray ptmd pbmd">{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

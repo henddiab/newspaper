@@ -1,0 +1,50 @@
+/* start search card style */
+
+.modal{
+    top: 4rem !important;
+    max-width: 1160px;
+}
+
+.card__search,
+.card__wrapper {
+    padding: 1px;
+    overflow: hidden;
+    width: 80%;
+}
+
+.card__search_Inner {
+    position: relative;
+}
+
+.Icon {
+    min-width: 46px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    position: absolute;
+    right: 0;
+}
+
+.icon svg {
+    transform: translate(-1px, -1px);
+}
+
+.card__search_Input {
+    width: 100%;
+}
+
+.card__search_Input input {
+    padding: 16px 32px;
+    border-radius: 7px;
+    display: block;
+    width: 100%;
+    border: 1px solid #6d7f8f;
+}
+
+.card__search_Input input:focus {
+    border: 2px solid #6d7f8f;
+}
+
+/* end search card style */

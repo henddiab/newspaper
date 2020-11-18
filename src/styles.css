@@ -1,1 +1,243 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ngx-smart-modal/ngx-smart-modal";
+
+/* start general style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    text-transform: none;
+    line-height: 20px;
+}
+
+button {
+    border: none;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+::placeholder,
+option,
+span {
+    font-size: .9rem;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+h1,
+.h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.auto-margin {
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-vertical-end {
+    align-items: flex-end;
+}
+
+.align-vertical-center {
+    align-items: center;
+}
+
+.align-horizontal {
+    justify-content: space-between;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.upperCase {
+    text-transform: uppercase;
+}
+
+/* box model */
+
+.pbsm {
+    padding-bottom: 8px;
+}
+
+.ptsm {
+    padding-top: 8px;
+}
+
+.plsm {
+    padding-left: 8px;
+}
+
+.prsm {
+    padding-right: 8px;
+}
+
+.pbmd {
+    padding-bottom: 16px;
+}
+
+.ptmd {
+    padding-top: 16px;
+}
+
+.plmd {
+    padding-left: 16px;
+}
+
+.prmd {
+    padding-right: 16px;
+}
+
+.pblg {
+    padding-bottom: 32px;
+}
+
+.ptlg {
+    padding-top: 32px;
+}
+
+.pllg {
+    padding-left: 32px;
+}
+
+.prlg {
+    padding-right: 32px;
+}
+
+.mbsm {
+    margin-bottom: 8px;
+}
+
+.mtsm {
+    margin-top: 8px;
+}
+
+.mlsm {
+    margin-left: 8px;
+}
+
+.mrsm {
+    margin-right: 8px;
+}
+
+.mbmd {
+    margin-bottom: 16px;
+}
+
+.mtmd {
+    margin-top: 16px;
+}
+
+.mlmd {
+    margin-left: 16px;
+}
+
+.mrmd {
+    margin-right: 16px;
+}
+
+.mblg {
+    margin-bottom: 32px;
+}
+
+.mtlg {
+    margin-top: 32px;
+}
+
+.mllg {
+    margin-left: 32px;
+}
+
+.mrlg {
+    margin-right: 32px;
+}
+
+
+/* width */
+
+.w-25 {
+    width: 25%;
+}
+
+.w-33 {
+    width: 33.33333%;
+}
+
+.w-66 {
+    width: 66.66666%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.color-gray {
+    color: gray;
+}
+
+/* end general style */
